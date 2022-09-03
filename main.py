@@ -4,7 +4,7 @@ from blog import Blog
 
 app = Flask(__name__)
 # fetch blogs from a json bin on https://www.npoint.io
-json_bin_endpoint = 'https://api.npoint.io/ed99320662742443cc5b'
+json_bin_endpoint = 'https://api.npoint.io/c790b4d5cab58020d391'
 my_blogs = requests.get(json_bin_endpoint).json()
 # create Blog objects for each blog in the json
 blog_objects = [Blog(blog_id=blog['id'], title=blog['title'], subtitle=blog['subtitle'], body=blog['body']) for blog in my_blogs]
